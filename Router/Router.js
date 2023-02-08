@@ -167,32 +167,6 @@ router.post('/order', async (req, res) => {
     try {
         let data = req.body;
         const { name, Mname, Lname, gender, email, phone, address, room1, room1name, room1price, room2, room2name, room2price, room3, room3name, room3price, total, tax } = data;
-        console.log(data);
-        // await order.create({
-        //     name: name,
-        //     Mname: Mname,
-        //     Lname: Lname,
-        //     gender: gender,
-        //     email: email,
-        //     phone: phone,
-        //     address: address,
-        //     summary: [
-        //         {
-        //             room1: room1,
-        //             room1name: room1name,
-        //             room1price: room1price,
-        //             room2: room2,
-        //             room2name: room2name,
-        //             room2price: room2price,
-        //             room3: room3,
-        //             room3name: room3name,
-        //             room3price: room3price,
-        //             total: total,
-        //             tax: tax
-        //         },
-        //     ]
-        // });
-
         await order.create(data)
 
 
