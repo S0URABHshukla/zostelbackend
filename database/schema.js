@@ -1,6 +1,4 @@
 const mongoose = require('mongoose');
-
-
 const SummarySchema = mongoose.Schema({
     room1: Number,
     room1name: String,
@@ -42,23 +40,6 @@ const orderSchema = mongoose.Schema({
 
 })
 
-// const orderSchema = mongoose.Schema({
-//     image: String,
-//     name: String,
-//     price: Number,
-//     quantity: Number,
-//     measurement: String,
-//     details: String,
-//     user: [
-//         {
-//             user_id: String,
-//             user_name: String,
-//         },
-//     ]
-// }
-// )
-
-
 
 const order = mongoose.model('order', orderSchema);
 
@@ -75,9 +56,6 @@ const nature = mongoose.model('nature', {});
 const off = mongoose.model('off', {});
 const latestread = mongoose.model('latestread', {});
 const booking = mongoose.model('booking', {});
-
-
-
 module.exports = {
     destination,
     news,
