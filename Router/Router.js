@@ -168,8 +168,6 @@ router.post('/order', async (req, res) => {
         let data = req.body;
         const { name, Mname, Lname, gender, email, phone, address, room1, room1name, room1price, room2, room2name, room2price, room3, room3name, room3price, total, tax } = data;
         await order.create(data)
-
-
         return res.send(data);
     }
     catch (err) {
@@ -178,12 +176,10 @@ router.post('/order', async (req, res) => {
         })
     }
 });
-
 
 router.get('/order', async (req, res) => {
     try {
         let data = await order.find();
-
         return res.send(data);
     }
     catch (err) {
@@ -192,38 +188,7 @@ router.get('/order', async (req, res) => {
         })
     }
 });
-
-
-
-
-
 module.exports = router;
-
-
-// {
-//     "name": "Denish",
-//     "Mname": "j",
-//     "Lname": "Fuletra",
-//     "gender": "Male",
-//     "email": "fuletradenish@gmail.com",
-//     "phone": "7383243000",
-//     "address": "C-308 Essencia Heights, near educomn internastional school, baner mahalunge road.",
-//     "summary": [
-//         {
-//             "room1": 2,
-//             "room1name": "4 Bed Mixed Dorm(Ensuite)",
-//             "room1price": 949,
-//             "room2": 2,
-//             "room2name": "6 Bed Mixed Dorm (shared washroom)",
-//             "room2price": 749,
-//             "room3": 0,
-//             "room3name": "10 Bed Mixed Dorm (shared washroom)",
-//             "room3price": 649,
-//             "total": 3396,
-//             "tax": 611.28
-//         }
-//     ]
-// }
 
 
 
